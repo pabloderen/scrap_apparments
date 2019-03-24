@@ -44,7 +44,7 @@ def look(links,csv):
             lat = data['results'][0]['geometry']['location']['lat']
             lng = data['results'][0]['geometry']['location']['lng']
             dormitorios =soup.find(string=re.compile('ormitorios')).find_next('span').text.strip()
-            print("New appartment!")
+            yield "New appartment!"
             
             save([precio, barrio, calle, dormitorios, links, lat, lng])
     except:
