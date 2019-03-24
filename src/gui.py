@@ -18,12 +18,13 @@ class LoginScreen(GridLayout):
         self.password = Button(text='scrap!')
         self.password.bind(on_press = lambda a:self.onclick())
         self.add_widget(self.password)
+        self.output = TextInput(multiline=True)
+        self.add_widget(self.output)
         
     def onclick(self):
-        self.password.text = "working..."
-        time.sleep(5)
-        run(self.username.text)
-        self.password.text = "done!"
+        self.output.text = "working..."
+        run(self.username.text, self.output)
+        self.output.text = "done!"
 
 class MyApp(App):
 

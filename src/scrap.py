@@ -10,7 +10,7 @@ import os
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 
-def look(links,csv):
+def look(links,textblock):
     """Scrap link of LaVoz Clasificados
 
     Scraps rent links looking for price, neighborhood, street, 
@@ -37,14 +37,14 @@ def look(links,csv):
         #if (int(precio)):
         calle = soup.find(string=re.compile('Calle:')).find_next('span').text.strip()
         #try to get latitud and longitud from google maps api
-        url_google_maps =( "https://maps.googleapis.com/maps/api/geocode/json?address="+ calle.replace(' ','+') + '+cordoba' +',+CA&key=AIzaSyCc55I-I05MFcRf1lzbMdIHZD9SbB3h1YI')
+        url_google_maps =( "https://maps.googleapis.com/maps/api/geocode/json?address="+ calle.replace(' ','+') + '+cordoba' +',+CA&key=' + key)
         
         with urllib.request.urlopen(url_google_maps) as url:
             data = json.loads(url.read().decode())
             lat = data['results'][0]['geometry']['location']['lat']
             lng = data['results'][0]['geometry']['location']['lng']
             dormitorios =soup.find(string=re.compile('ormitorios')).find_next('span').text.strip()
-            yield "New appartment!"
+            textblock.text = ('new appartement')
             
             save([precio, barrio, calle, dormitorios, links, lat, lng])
     except:
@@ -58,7 +58,7 @@ def save(l):
         writer = csv.writer(output, lineterminator='\n')
         writer.writerow(l)
 
-def general(page,counts,csvs):
+def general(page,counts,textblock):
 
     counts = counts +1
     page = urllib2.urlopen(page)
@@ -71,8 +71,8 @@ def general(page,counts,csvs):
     if counts <1:
         next_page = 'http://clasificados.lavoz.com.ar' +soup.find('li',class_='pager-next').find('a').attrs['href']
         time.sleep(2)
-        print("New page")
-        general(next_page,counts,csvs)
+        textblock.text = "New page"
+        general(next_page,counts,textblock)
         
     return csvs
 
@@ -82,9 +82,10 @@ csvs.append(["precio", "barrio", "calle", "dormitorios", "links", "lat", "lng"])
 
 
 
-def run(quote_page):
+def run(quote_page,textblock):
+    textblock.text = "working"
     if  quote_page is not None and quote_page:
         csvfile = dir_path + '/deptos.csv'
-        out= general(quote_page,0,csvs)
+        out= general(quote_page,0,textblock)
       
             
