@@ -1,0 +1,27 @@
+[INFO   ] Logger: Record log in /storage/emulated/0/Android/data/com.manichord.mgit/files/repo/scrap_apparments/src/.kivy/logs/kivy_19-03-23_42.txt
+[INFO   ] Kivy: v1.10.1.dev0, git-ae3665c, 20180425
+[INFO   ] Python: v3.6.2 (default, Apr 25 2018, 09:37:02) 
+[GCC 7.2.0]
+[INFO   ] Factory: 194 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil, img_gif (img_ffpyplayer ignored)
+[INFO   ] Text: Provider: sdl2
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/Android/data/com.manichord.mgit/files/repo/scrap_apparments/src/gui.py", line 6, in <module>
+[WARNING] stderr:     from scrap import *
+[WARNING] stderr:   File "/storage/emulated/0/Android/data/com.manichord.mgit/files/repo/scrap_apparments/src/scrap.py", line 84, in <module>
+[WARNING] stderr:     run("")
+[WARNING] stderr:   File "/storage/emulated/0/Android/data/com.manichord.mgit/files/repo/scrap_apparments/src/scrap.py", line 79, in run
+[WARNING] stderr:     out= general(quote_page,0,csvs)
+[WARNING] stderr:   File "/storage/emulated/0/Android/data/com.manichord.mgit/files/repo/scrap_apparments/src/scrap.py", line 55, in general
+[WARNING] stderr:     page = urllib2.urlopen(page)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/urllib/request.py", line 223, in urlopen
+[WARNING] stderr:     return opener.open(url, data, timeout)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/urllib/request.py", line 511, in open
+[WARNING] stderr:     req = Request(fullurl, data)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/urllib/request.py", line 329, in __init__
+[WARNING] stderr:     self.full_url = url
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/urllib/request.py", line 355, in full_url
+[WARNING] stderr:     self._parse()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/urllib/request.py", line 384, in _parse
+[WARNING] stderr:     raise ValueError("unknown url type: %r" % self.full_url)
+[WARNING] stderr: ValueError: unknown url type: ''

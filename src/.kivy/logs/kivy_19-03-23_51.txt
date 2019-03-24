@@ -1,0 +1,92 @@
+[INFO   ] Logger: Record log in /storage/emulated/0/Android/data/com.manichord.mgit/files/repo/scrap_apparments/src/.kivy/logs/kivy_19-03-23_51.txt
+[INFO   ] Kivy: v1.10.1.dev0, git-ae3665c, 20180425
+[INFO   ] Python: v3.6.2 (default, Apr 25 2018, 09:37:02) 
+[GCC 7.2.0]
+[INFO   ] Factory: 194 symbols loaded
+[INFO   ] Image: Providers: img_tex, img_dds, img_sdl2, img_pil, img_gif (img_ffpyplayer ignored)
+[INFO   ] Text: Provider: sdl2
+[INFO   ] OSC: using <thread> for socket
+[INFO   ] Window: Provider: sdl2
+[INFO   ] GL: Using the "OpenGL ES 2" graphics system
+[INFO   ] GL: Backend used <gl>
+[INFO   ] GL: OpenGL version <b'OpenGL ES 3.2 V@331.0 (GIT@2df12b3, I07da2d9908) (Date:10/04/18)'>
+[INFO   ] GL: OpenGL vendor <b'Qualcomm'>
+[INFO   ] GL: OpenGL renderer <b'Adreno (TM) 506'>
+[INFO   ] GL: OpenGL parsed version: 3, 2
+[INFO   ] GL: Texture max size <16384>
+[INFO   ] GL: Texture max units <16>
+[INFO   ] Window: auto add sdl2 input provider
+[INFO   ] Window: virtual keyboard not allowed, single mode, not docked
+[WARNING] Base: Unknown <android> provider
+[INFO   ] Base: Start application main loop
+[INFO   ] GL: NPOT texture support is available
+[WARNING] Base: Failed to import "android" module. Could not remove android presplash.
+[INFO   ] Clipboard: Provider: android
+[INFO   ] Base: Leaving application in progress...
+[WARNING] stderr: Traceback (most recent call last):
+[WARNING] stderr:   File "/storage/emulated/0/Android/data/com.manichord.mgit/files/repo/scrap_apparments/src/gui.py", line 35, in <module>
+[WARNING] stderr:     MyApp().run()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/site-packages/kivy/app.py", line 826, in run
+[WARNING] stderr:     runTouchApp()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/site-packages/kivy/base.py", line 502, in runTouchApp
+[WARNING] stderr:     EventLoop.window.mainloop()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/site-packages/kivy/core/window/window_sdl2.py", line 723, in mainloop
+[WARNING] stderr:     self._mainloop()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/site-packages/kivy/core/window/window_sdl2.py", line 460, in _mainloop
+[WARNING] stderr:     EventLoop.idle()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/site-packages/kivy/base.py", line 340, in idle
+[WARNING] stderr:     self.dispatch_input()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/site-packages/kivy/base.py", line 325, in dispatch_input
+[WARNING] stderr:     post_dispatch_input(*pop(0))
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/site-packages/kivy/base.py", line 231, in post_dispatch_input
+[WARNING] stderr:     listener.dispatch('on_motion', etype, me)
+[WARNING] stderr:   File "kivy/_event.pyx", line 707, in kivy._event.EventDispatcher.dispatch (kivy/_event.c:7797)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/site-packages/kivy/core/window/__init__.py", line 1352, in on_motion
+[WARNING] stderr:     self.dispatch('on_touch_down', me)
+[WARNING] stderr:   File "kivy/_event.pyx", line 707, in kivy._event.EventDispatcher.dispatch (kivy/_event.c:7797)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/site-packages/kivy/core/window/__init__.py", line 1368, in on_touch_down
+[WARNING] stderr:     if w.dispatch('on_touch_down', touch):
+[WARNING] stderr:   File "kivy/_event.pyx", line 707, in kivy._event.EventDispatcher.dispatch (kivy/_event.c:7797)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/site-packages/kivy/uix/widget.py", line 460, in on_touch_down
+[WARNING] stderr:     if child.dispatch('on_touch_down', touch):
+[WARNING] stderr:   File "kivy/_event.pyx", line 707, in kivy._event.EventDispatcher.dispatch (kivy/_event.c:7797)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/site-packages/kivy/uix/behaviors/button.py", line 151, in on_touch_down
+[WARNING] stderr:     self.dispatch('on_press')
+[WARNING] stderr:   File "kivy/_event.pyx", line 703, in kivy._event.EventDispatcher.dispatch (kivy/_event.c:7752)
+[WARNING] stderr:   File "kivy/_event.pyx", line 1214, in kivy._event.EventObservers.dispatch (kivy/_event.c:13511)
+[WARNING] stderr:   File "kivy/_event.pyx", line 1138, in kivy._event.EventObservers._dispatch (kivy/_event.c:13040)
+[WARNING] stderr:   File "/storage/emulated/0/Android/data/com.manichord.mgit/files/repo/scrap_apparments/src/gui.py", line 19, in <lambda>
+[WARNING] stderr:     self.password.bind(on_press = lambda a:self.onclick())
+[WARNING] stderr:   File "/storage/emulated/0/Android/data/com.manichord.mgit/files/repo/scrap_apparments/src/gui.py", line 24, in onclick
+[WARNING] stderr:     run(self.username.text)
+[WARNING] stderr:   File "/storage/emulated/0/Android/data/com.manichord.mgit/files/repo/scrap_apparments/src/scrap.py", line 79, in run
+[WARNING] stderr:     out= general(quote_page,0,csvs)
+[WARNING] stderr:   File "/storage/emulated/0/Android/data/com.manichord.mgit/files/repo/scrap_apparments/src/scrap.py", line 55, in general
+[WARNING] stderr:     page = urllib2.urlopen(page)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/urllib/request.py", line 223, in urlopen
+[WARNING] stderr:     return opener.open(url, data, timeout)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/urllib/request.py", line 526, in open
+[WARNING] stderr:     response = self._open(req, data)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/urllib/request.py", line 544, in _open
+[WARNING] stderr:     '_open', req)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/urllib/request.py", line 504, in _call_chain
+[WARNING] stderr:     result = func(*args)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/urllib/request.py", line 1361, in https_open
+[WARNING] stderr:     context=self._context, check_hostname=self._check_hostname)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/urllib/request.py", line 1321, in do_open
+[WARNING] stderr:     r = h.getresponse()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/http/client.py", line 1331, in getresponse
+[WARNING] stderr:     response.begin()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/http/client.py", line 297, in begin
+[WARNING] stderr:     version, status, reason = self._read_status()
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/http/client.py", line 258, in _read_status
+[WARNING] stderr:     line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/socket.py", line 586, in readinto
+[WARNING] stderr:     return self._sock.recv_into(b)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/ssl.py", line 1002, in recv_into
+[WARNING] stderr:     return self.read(nbytes, buffer)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/ssl.py", line 865, in read
+[WARNING] stderr:     return self._sslobj.read(len, buffer)
+[WARNING] stderr:   File "/data/user/0/ru.iiec.pydroid3/files/arm-linux-androideabi/lib/python3.6/ssl.py", line 625, in read
+[WARNING] stderr:     v = self._sslobj.read(len, buffer)
+[WARNING] stderr: ConnectionAbortedError: [Errno 103] Software caused connection abort
